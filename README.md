@@ -81,6 +81,4 @@ spring+spring mvc+mybatis+jquery+ajax
 
 ---
 
-如有疑问，请到这里联系我：https://rain.baimuxym.cn/
-
-或者微信联系：HaC200
+- blog: [https://learnjava.baimuxym.cn/](https://learnjava.baimuxym.cn/)
