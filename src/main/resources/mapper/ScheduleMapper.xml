@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.hellocoder.renthouse.dao.ScheduleMapper" >
+<resultMap id="BaseResultMap" type="com.hellocoder.renthouse.Pojo.Schedule" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="date" property="date" jdbcType="VARCHAR" />
+    <result column="content" property="content" jdbcType="VARCHAR" />
+    
+  </resultMap>
+<insert id="insertschedule" parameterType="com.hellocoder.renthouse.Pojo.Schedule">
+	  insert into schedule(date,content) 
+	  values(#{date},#{content})
+	</insert>
+<select id="selectAll" resultMap="BaseResultMap">
+   select *
+    from schedule
+    </select>
+<select id="selectbyid" resultType="com.hellocoder.renthouse.Pojo.Schedule" parameterType="Integer">
+   select *
+    from schedule where id=#{id}
+    </select>
+<delete id="deleteschedule" parameterType="Integer" >
+		delete from schedule where id=#{id}
+	</delete>
+<update id="updateschedule" parameterType="com.hellocoder.renthouse.Pojo.Schedule">
+		update schedule set date=#{date},content=#{content}
+		where id=#{id}
+</update>
+</mapper>
